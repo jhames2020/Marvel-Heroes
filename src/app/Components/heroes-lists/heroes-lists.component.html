@@ -4,3 +4,15 @@
     <span><b>Hero Name: </b></span><input type="text" id="heroName" [(ngModel)] = "hero.name">
     <div><b>id: </b>{{hero.id}}<span><b>| name:</b> </span>{{hero.name}}</div>
 </div>
+<div>
+    <h2>
+        <ul>
+            <li *ngFor="let hero of heroes">
+                <button type="button" (click)="onSelect(hero)">
+                    <span class="badge">{{hero.id}}</span>
+                    <span class="name">{{hero.name}}</span>
+                </button>
+            </li>
+        </ul>    
+    </h2>
+</div>
